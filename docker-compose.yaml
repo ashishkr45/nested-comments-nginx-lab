@@ -1,6 +1,6 @@
 services:
   app1:
-    image: <dockerhub-username>/comments-app:latest
+    image: ashish4594/comments-app:latest
     container_name: comments-app1
     environment:
       - APP_NAME=App1
@@ -11,7 +11,7 @@ services:
       - comments-net
 
   app2:
-    image: <dockerhub-username>/comments-app:latest
+    image: ashish4594/comments-app:latest
     container_name: comments-app2
     environment:
       - APP_NAME=App2
@@ -22,7 +22,7 @@ services:
       - comments-net
 
   app3:
-    image: <dockerhub-username>/comments-app:latest
+    image: ashish4594/comments-app:latest
     container_name: comments-app3
     environment:
       - APP_NAME=App3
