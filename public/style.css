@@ -1,0 +1,209 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+:root {
+	--background-color: #22242a;
+	--card-color: #2c2e35;
+	--button-color: #4e5059;
+	--button-hover-color: #5b5c66;
+	--input-area: #363840;
+	--text-color: #a0a2ab;
+	--border: #4b4d56;
+	--accent: #7c8cff;
+	--danger: #c05a5a;
+	--danger-hover: #d16b6b;
+}
+
+.root {
+	background-color: var(--background-color);
+	min-height: 100vh;
+}
+
+.container {
+	width: 70%;
+	margin: 0 auto;
+	padding: 20px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 20px;
+}
+
+.input-area {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 3px;
+}
+
+.input-area input,
+#editCommentInput,
+#replyCommentInput {
+	height: 30px;
+	flex: 1;
+	border-radius: 20px 0 0 20px;
+	padding: 10px;
+	background-color: var(--input-area);
+	color: var(--text-color);
+	font-size: large;
+	border: 2px solid var(--border);
+	transition: border-color 0.15s ease;
+}
+
+.input-area input:focus,
+#editCommentInput:focus,
+#replyCommentInput:focus {
+	outline: none;
+	border-color: var(--accent);
+}
+
+.input-area button {
+	border-radius: 0 20px 20px 0;
+	padding: 10px;
+	background-color: var(--button-color);
+	color: var(--text-color);
+	border: 2px solid var(--border);
+	cursor: pointer;
+	transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+.input-area button:hover {
+	background-color: var(--button-hover-color);
+}
+
+.input-area button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+	background-color: var(--button-color);
+}
+
+.commnet-display {
+	width: 100%;
+	padding: 20px;
+	background-color: var(--card-color);
+	border-radius: 20px;
+	border: 2px solid var(--border);
+	width: inherit;
+	min-height: 300px;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+	gap: 10px;
+}
+
+.commnet-display:empty::before {
+	content: "No comments yet — be the first to say something.";
+	color: var(--text-color);
+	opacity: 0.6;
+	font-size: large;
+	padding: 20px 0;
+}
+
+.comment-box {
+	width: 100%;
+	padding: 12px 14px;
+	background-color: var(--card-color);
+	font-size: large;
+	color: var(--text-color);
+	border-radius: 16px;
+	border: 2px solid var(--border);
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	gap: 10px;
+	transition: border-color 0.15s ease;
+}
+
+.comment-box:hover {
+	border-color: #5a5d68;
+}
+
+.commentText {
+	word-break: break-word;
+	line-height: 1.4;
+}
+
+.comment-box button {
+	padding: 8px 12px;
+	width: fit-content;
+	border-radius: 15px;
+	border: 2px solid var(--border);
+	background-color: var(--button-color);
+	color: var(--text-color);
+	cursor: pointer;
+	font-size: 0.85em;
+	transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.comment-box button:hover {
+	background-color: var(--button-hover-color);
+}
+
+.comment-box button:active {
+	transform: scale(0.96);
+}
+
+.iconBtn {
+	padding: 6px 10px;
+	line-height: 1;
+}
+
+.likeCount {
+	min-width: 1.2em;
+	text-align: center;
+	font-weight: 600;
+}
+
+.dangerBtn {
+	background-color: transparent;
+	border-color: var(--danger);
+	color: var(--danger);
+	margin-left: auto;
+}
+
+.dangerBtn:hover {
+	background-color: var(--danger);
+	color: #fff;
+}
+
+.operationDiv {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+
+.reply-box {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 10px;
+	background-color: var(--input-area);
+	border-radius: 14px;
+	border: 1px solid var(--border);
+}
+
+.reply-box .input-area,
+.reply-box input {
+	width: 100%;
+}
+
+.reply-box input {
+	border-radius: 20px;
+}
+
+.children-container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-left: 18px;
+	margin-left: 6px;
+	border-left: 2px solid var(--border);
+}
