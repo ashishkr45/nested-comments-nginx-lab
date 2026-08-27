@@ -207,3 +207,76 @@
 	margin-left: 6px;
 	border-left: 2px solid var(--border);
 }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+	.container {
+		width: 100%;
+		padding: 12px;
+		gap: 14px;
+	}
+
+	.input-area input,
+	#editCommentInput,
+	#replyCommentInput {
+		font-size: 16px;
+		/* prevents iOS Safari auto-zoom on focus */
+		height: 44px;
+	}
+
+	.input-area button {
+		padding: 10px 14px;
+		font-size: 0.95em;
+		min-width: 44px;
+	}
+
+	.commnet-display {
+		padding: 14px;
+		min-height: 200px;
+		border-radius: 16px;
+	}
+
+	.comment-box {
+		padding: 10px 12px;
+		font-size: 1em;
+		border-radius: 14px;
+	}
+
+	.comment-box button {
+		padding: 10px 12px;
+		/* keeps tap targets comfortable on touch screens */
+		font-size: 0.8em;
+	}
+
+	.dangerBtn {
+		margin-left: 0;
+		/* don't force it to the far right on a narrow row */
+	}
+
+	/* shallower indent per level so a few nested replies don't push
+	   text off the edge of small screens */
+	.children-container {
+		padding-left: 10px;
+		margin-left: 4px;
+		gap: 8px;
+	}
+
+	.operationDiv {
+		gap: 8px;
+	}
+}
+
+@media (max-width: 380px) {
+	.container {
+		padding: 8px;
+	}
+
+	.comment-box {
+		font-size: 0.95em;
+	}
+
+	.children-container {
+		padding-left: 6px;
+		margin-left: 2px;
+	}
+}
